@@ -9,7 +9,7 @@ public:
             int num = nums1[i];
             int idx = -1;
 
-            for(int j =0; j < nums2.size(); j++)
+            for(int j =0; j < nums2.size(); j++)  // o(n)
             {
                 if(nums2[j] == num)
                 {
@@ -20,7 +20,7 @@ public:
             }
 
             int nextgr = -1;
-            for(int k = idx; k < nums2.size(); k++)
+            for(int k = idx; k < nums2.size(); k++) // o(n)
             {
                 if(nums2[k] > num)
                 {
@@ -34,3 +34,13 @@ public:
         return ans;
     }
 };
+
+// Complexity
+// Finding index in nums2 = O(n)
+
+// Scanning to right for next greater = O(n)
+
+// For m elements in nums1, total worst-case = O(m × n).
+
+// Space complexity = O(1) (not counting output).
+
